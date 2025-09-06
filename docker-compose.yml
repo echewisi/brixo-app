@@ -1,0 +1,49 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - MONGODB_URI=mongodb://mongodb:27017/brixo-ifsc
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - FRESHNESS_DAYS=7
+      - CACHE_TTL=60
+    depends_on:
+      - mongodb
+      - redis
+    networks:
+      - brixo-network
+
+  mongodb:
+    image: mongo:7.0
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_DATABASE=brixo-ifsc
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      - brixo-network
+
+  redis:
+    image: redis:7.2-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - brixo-network
+
+volumes:
+  mongodb_data:
+  redis_data:
+
+networks:
+  brixo-network:
+    driver: bridge
+
