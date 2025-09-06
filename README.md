@@ -2,7 +2,7 @@
 
 A robust and scalable API service for retrieving Indian Financial System Code (IFSC) details with intelligent caching and smart data retrieval capabilities.
 
-## 🚀 Features
+##  Features
 
 - **Smart Data Retrieval**: Automatically fetches fresh data from external APIs when cached data is stale
 - **Multi-layer Caching**: Redis-based caching for optimal performance
@@ -13,7 +13,7 @@ A robust and scalable API service for retrieving Indian Financial System Code (I
 - **Docker Support**: Containerized deployment with Docker Compose
 - **Test Coverage**: Unit and integration tests for reliability
 
-## 🏗️ Architecture
+##  Architecture
 
 The application follows a clean, modular architecture with the following components:
 
@@ -23,14 +23,14 @@ The application follows a clean, modular architecture with the following compone
 - **Provider Layer**: External API integrations (Razorpay IFSC API)
 - **Cache Layer**: Redis-based caching for performance optimization
 
-## 📋 Prerequisites
+##  Prerequisites
 
 - Node.js 18+ 
 - MongoDB 7.0+
 - Redis 7.0+
 - Docker & Docker Compose (optional)
 
-## 🛠️ Installation
+##  Installation
 
 ### Local Development Setup
 
@@ -82,7 +82,7 @@ The application follows a clean, modular architecture with the following compone
    ```
 
 ### Docker Setup
-
+(note: the docker setup is a bit rusty so i plea for some leniency)
 1. **Development with Docker Compose**
    ```bash
    docker-compose -f docker-compose.dev.yml up --build
@@ -109,7 +109,7 @@ npm run test:cov
 npm run test:watch
 ```
 
-## 📚 API Documentation
+##  API Documentation
 
 Once the application is running, visit:
 - **API Documentation**: http://localhost:3000/api
@@ -175,28 +175,8 @@ The application implements intelligent data retrieval with the following logic:
 4. **External API**: Fetches fresh data from Razorpay IFSC API if data is stale
 5. **Update & Cache**: Updates database and caches the fresh data
 
-## 🏗️ Project Structure
 
-```
-src/
-├── cache/                 # Cache service implementation
-├── common/               # Shared utilities and interfaces
-│   ├── exceptions/       # Exception filters
-│   ├── interfaces/       # TypeScript interfaces
-│   └── pipes/           # Validation pipes
-├── config/              # Configuration files
-├── database/            # Database schemas
-│   └── schemas/
-├── modules/             # Feature modules
-│   └── ifsc/           # IFSC module
-│       ├── dto/        # Data Transfer Objects
-│       ├── providers/  # External API providers
-│       ├── repositories/ # Database repositories
-│       └── services/   # Business logic services
-└── main.ts             # Application entry point
-```
-
-## 🚀 Deployment
+##  Deployment
 
 ### Production Deployment
 
@@ -223,14 +203,14 @@ src/
 docker-compose up -d
 ```
 
-## 🔍 Monitoring & Health Checks
+##  Monitoring & Health Checks
 
 The application includes health check endpoints to monitor:
 - Database connectivity
 - Cache service status
 - External API availability
 
-## 🤝 Contributing
+##  Contributing
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/amazing-feature`)
@@ -238,18 +218,18 @@ The application includes health check endpoints to monitor:
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📄 License
+##  License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🆘 Support
+##  Support
 
 For support and questions:
 - Create an issue in the repository
 - Check the API documentation at `/api`
 - Review the test files for usage examples
 
-## 🎯 Future Enhancements
+##  Future Enhancements
 
 - [ ] Additional IFSC data providers
 - [ ] Rate limiting and throttling
