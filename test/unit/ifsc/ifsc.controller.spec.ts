@@ -9,12 +9,21 @@ describe('IfscController', () => {
   const mockIfscData = {
     ifsc: 'HDFC0CAGSBK',
     bank: 'HDFC Bank',
+    bankCode: 'HDFC',
     branch: 'CAGSBK',
+    centre: 'MUMBAI',
+    district: 'Mumbai',
+    state: 'Maharashtra',
     address: '123 Main St',
     contact: '1234567890',
     city: 'Mumbai',
-    district: 'Mumbai',
-    state: 'Maharashtra',
+    micr: '400240002',
+    imps: true,
+    upi: true,
+    rtgs: true,
+    neft: true,
+    swift: 'HDFCINBB',
+    iso3166: 'IN-MH',
     updatedAt: new Date(),
   };
 

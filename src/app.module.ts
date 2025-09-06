@@ -8,7 +8,6 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { IfscModule } from './modules/ifsc/ifsc.module';
 import { HealthModule } from './health/health.module';
-import { CacheModule as AppCacheModule } from './cache/cache.module';
 import databaseConfig from './config/database.config';
 import cacheConfig from './config/cache.config';
 import appConfig from './config/app.config';
@@ -42,7 +41,6 @@ import { validationSchema } from './config/validation.schema';
       inject: [ConfigService],
     }),
     HttpModule,
-    AppCacheModule,
     IfscModule,
     HealthModule,
   ],

@@ -37,12 +37,21 @@ describe('IFSC (e2e)', () => {
         .expect((res) => {
           expect(res.body).toHaveProperty('ifsc');
           expect(res.body).toHaveProperty('bank');
+          expect(res.body).toHaveProperty('bankCode');
           expect(res.body).toHaveProperty('branch');
+          expect(res.body).toHaveProperty('centre');
+          expect(res.body).toHaveProperty('district');
+          expect(res.body).toHaveProperty('state');
           expect(res.body).toHaveProperty('address');
           expect(res.body).toHaveProperty('contact');
           expect(res.body).toHaveProperty('city');
-          expect(res.body).toHaveProperty('district');
-          expect(res.body).toHaveProperty('state');
+          expect(res.body).toHaveProperty('micr');
+          expect(res.body).toHaveProperty('imps');
+          expect(res.body).toHaveProperty('upi');
+          expect(res.body).toHaveProperty('rtgs');
+          expect(res.body).toHaveProperty('neft');
+          expect(res.body).toHaveProperty('swift');
+          expect(res.body).toHaveProperty('iso3166');
           expect(res.body).toHaveProperty('updatedAt');
         });
     });

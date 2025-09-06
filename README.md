@@ -36,7 +36,7 @@ The application follows a clean, modular architecture with the following compone
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/echewisi/brixo-app
    cd brixo-app
    ```
 

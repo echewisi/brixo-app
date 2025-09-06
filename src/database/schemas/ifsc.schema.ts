@@ -12,7 +12,19 @@ export class Ifsc {
   bank: string;
 
   @Prop({ required: true })
+  bankCode: string;
+
+  @Prop({ required: true })
   branch: string;
+
+  @Prop({ required: true })
+  centre: string;
+
+  @Prop({ required: true })
+  district: string;
+
+  @Prop({ required: true })
+  state: string;
 
   @Prop({ required: true })
   address: string;
@@ -24,10 +36,25 @@ export class Ifsc {
   city: string;
 
   @Prop({ required: true })
-  district: string;
+  micr: string;
+
+  @Prop({ default: false })
+  imps: boolean;
+
+  @Prop({ default: false })
+  upi: boolean;
+
+  @Prop({ default: false })
+  rtgs: boolean;
+
+  @Prop({ default: false })
+  neft: boolean;
+
+  @Prop({ default: '' })
+  swift: string;
 
   @Prop({ required: true })
-  state: string;
+  iso3166: string;
 
   @Prop({ default: Date.now })
   updatedAt: Date;

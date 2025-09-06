@@ -20,12 +20,21 @@ export abstract class BaseIfscProvider implements IfscProvider {
     return {
       ifsc: data.IFSC || data.ifsc,
       bank: data.BANK || data.bank,
+      bankCode: data.BANKCODE || data.bankCode,
       branch: data.BRANCH || data.branch,
+      centre: data.CENTRE || data.centre,
+      district: data.DISTRICT || data.district,
+      state: data.STATE || data.state,
       address: data.ADDRESS || data.address,
       contact: data.CONTACT || data.contact,
       city: data.CITY || data.city,
-      district: data.DISTRICT || data.district,
-      state: data.STATE || data.state,
+      micr: data.MICR || data.micr,
+      imps: Boolean(data.IMPS || data.imps),
+      upi: Boolean(data.UPI || data.upi),
+      rtgs: Boolean(data.RTGS || data.rtgs),
+      neft: Boolean(data.NEFT || data.neft),
+      swift: data.SWIFT || data.swift || '',
+      iso3166: data.ISO3166 || data.iso3166,
       updatedAt: new Date(),
     };
   }
